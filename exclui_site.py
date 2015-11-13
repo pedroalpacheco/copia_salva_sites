@@ -11,7 +11,7 @@ import os
 
 #Pega data e hora
 agora = datetime.now()
-#hoje = input agora
+hoje = str(agora)
 
 #Abre o arquivo adicionando na última linha
 arquivo = open('HISTORICO_SITE_DELETADOS.txt', "a+")
@@ -31,13 +31,13 @@ if os.path.exists(caminhotot):
     print "Site %s MOVIDO " % site
     #Gera dados de log de acoes
     resulthist = "Site %s MOVIDO " % site
-    arquivo.writelines('\n'+resulthist)
+    arquivo.writelines('\n'+resulthist+hoje)
     arquivo.close()
 else:
     print "Site %s NAO ENCONTRADO! " % site
     resulthist = "Site %s NAO ENCONTRADO! " % site
     #Gera dados de log de acoes
-    arquivo.writelines('\n'+resulthist)
+    arquivo.writelines('\n'+resulthist+hoje)
     arquivo.close()
     
     
