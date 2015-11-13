@@ -28,16 +28,16 @@ caminhotot = caminhoorig + site
 #Verifica se caminho existe
 if os.path.exists(caminhotot):
     shutil.move(caminhotot, destino)
-    print "Site %s MOVIDO " % site
+    print " -Site %s MOVIDO " % site
     #Gera dados de log de acoes
-    resulthist = "Site %s MOVIDO " % site
-    arquivo.writelines('\n'+resulthist+hoje)
+    resulthist = " -Site %s MOVIDO " % site
+    arquivo.writelines('\n'+hoje+resulthist)
     arquivo.close()
 else:
-    print "Site %s NAO ENCONTRADO! " % site
-    resulthist = "Site %s NAO ENCONTRADO! " % site
+    print " -Site %s NAO ENCONTRADO! " % site
+    resulthist = " -Site %s NAO ENCONTRADO! " % site
     #Gera dados de log de acoes
-    arquivo.writelines('\n'+resulthist+hoje)
+    arquivo.writelines('\n'+hoje+resulthist)
     arquivo.close()
     
     
