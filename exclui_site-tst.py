@@ -23,7 +23,6 @@ site = raw_input("Digite o diretorio:")
 
 caminhotot = caminhoorig + site
 
-
 #print caminhotot
 
 #Verifica se caminho existe
@@ -40,8 +39,8 @@ else:
     #Gera dados de log de acoes
     arquivo.writelines('\n'+hoje+resulthist)
     arquivo.close()
-
-
-
-
-
+    
+    
+    
+    
+    
