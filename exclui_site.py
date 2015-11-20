@@ -23,11 +23,13 @@ site = raw_input("Digite o diretorio:")
 
 caminhotot = caminhoorig + site
 
-
+    
 #print caminhotot
-
 #Verifica se caminho existe
-if os.path.exists(caminhotot):
+
+if site == "":
+    print "Diretorio vazio!"
+elif os.path.exists(caminhotot):
     shutil.move(caminhotot, destino)
     resulthist = " -Site %s MOVIDO " % site
     print resulthist
@@ -40,7 +42,6 @@ else:
     #Gera dados de log de acoes
     arquivo.writelines('\n'+hoje+resulthist)
     arquivo.close()
-
 
 
 
